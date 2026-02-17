@@ -1,0 +1,21 @@
+<svg width="1400" height="900" viewBox="0 0 1400 900" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1400" height="900" fill="#F4F7F9"/>
+  <rect x="60" y="60" width="1280" height="780" rx="36" fill="#FFFFFF"/>
+
+  <rect x="120" y="120" width="1160" height="120" rx="24" fill="#0F3D4C"/>
+  <text x="160" y="190" font-family="Arial, sans-serif" font-size="32" fill="#FFFFFF" font-weight="700">HarborFresh Checkout</text>
+
+  <rect x="120" y="280" width="520" height="500" rx="24" fill="#F4F7F9"/>
+  <rect x="680" y="280" width="600" height="500" rx="24" fill="#F4F7F9"/>
+
+  <rect x="160" y="330" width="440" height="60" rx="16" fill="#CFECEF"/>
+  <rect x="160" y="410" width="440" height="60" rx="16" fill="#FFE3D1"/>
+  <rect x="160" y="490" width="440" height="60" rx="16" fill="#C8F0E2"/>
+
+  <rect x="720" y="340" width="520" height="90" rx="18" fill="#FFFFFF" stroke="#E6ECEF"/>
+  <rect x="720" y="450" width="520" height="90" rx="18" fill="#FFFFFF" stroke="#E6ECEF"/>
+  <rect x="720" y="560" width="520" height="90" rx="18" fill="#FFFFFF" stroke="#E6ECEF"/>
+
+  <rect x="980" y="690" width="260" height="60" rx="18" fill="#0F3D4C"/>
+  <text x="1030" y="730" font-family="Arial, sans-serif" font-size="20" fill="#FFFFFF" font-weight="700">Pay & Place</text>
+</svg>

@@ -1,8 +1,19 @@
 # HarborFresh Android
 
-Dock-to-door seafood marketplace Android app with Customer, Seller, and Admin experiences.
+<div align="center">
+  <img src="demos/harborfresh_mockup_overview.svg" width="100%" alt="HarborFresh Android preview" />
+</div>
 
-![Platform](https://img.shields.io/badge/Platform-Android-3DDC84) ![Build](https://img.shields.io/badge/Build-Gradle-02303A) ![Languages](https://img.shields.io/badge/Languages-Kotlin-7F52FF) ![Backend](https://img.shields.io/badge/Backend-PHP%20%2B%20MySQL-777BB4) ![Status](https://img.shields.io/badge/Status-Production--ready-0F3D4C) ![License](https://img.shields.io/badge/License-MIT-black)
+<p align="center">
+  <img src="https://img.shields.io/badge/Platform-Android-3DDC84?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Kotlin-7F52FF?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Material%203-0F3D4C?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Retrofit-0F3D4C?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Backend-PHP%20%2B%20MySQL-777BB4?style=for-the-badge" />
+  <img src="https://img.shields.io/badge/Status-Production--ready-2F7D67?style=for-the-badge" />
+</p>
+
+<p align="center"><strong>HarborFresh</strong> — dock-to-door seafood marketplace Android app for customers, sellers, and admins.</p>
 
 Built by Shashank Preetham Pendyala
 
@@ -48,7 +59,10 @@ Success is measured by:
 
 ## Demo
 
-![HarborFresh Demo](demos/harborfresh_demo.gif)
+<div align="center">
+  <img src="demos/harborfresh_mockup_overview.svg" width="100%" alt="HarborFresh overview" />
+  <img src="demos/harborfresh_mockup_checkout.svg" width="100%" alt="HarborFresh checkout" />
+</div>
 
 ---
 
