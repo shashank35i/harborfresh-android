@@ -1,0 +1,365 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rootOrderConfirmed"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/hf_background">
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scroll"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        android:overScrollMode="never"
+        android:scrollbars="none"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingStart="22dp"
+            android:paddingEnd="22dp"
+            android:paddingTop="34dp"
+            android:paddingBottom="28dp">
+
+            <!-- Big green check -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/checkCircle"
+                android:layout_width="112dp"
+                android:layout_height="112dp"
+                app:cardBackgroundColor="@color/hf_tertiary"
+                app:cardCornerRadius="56dp"
+                app:cardElevation="0dp"
+                app:cardUseCompatPadding="false"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="18dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:padding="30dp"
+                    android:src="@drawable/ic_check_24"
+                    android:tint="@color/hf_on_primary"
+                    android:contentDescription="@null" />
+            </com.google.android.material.card.MaterialCardView>
+
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Order Confirmed!"
+                android:textColor="@color/hf_on_background"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                android:gravity="center"
+                app:layout_constraintTop_toBottomOf="@id/checkCircle"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="18dp" />
+
+            <TextView
+                android:id="@+id/tvSub"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Your order is being prepared for dock pickup"
+                android:textColor="@color/hf_on_surface_variant"
+                android:textSize="15sp"
+                android:gravity="center"
+                app:layout_constraintTop_toBottomOf="@id/tvTitle"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginTop="10dp" />
+
+            <!-- Order info card -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardOrder"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="22dp"
+                app:cardBackgroundColor="@color/hf_surface"
+                app:cardCornerRadius="22dp"
+                app:cardElevation="12dp"
+                app:cardUseCompatPadding="true"
+                app:strokeWidth="1dp"
+                app:strokeColor="@color/hf_surface_variant"
+                app:layout_constraintTop_toBottomOf="@id/tvSub"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="18dp">
+
+                    <!-- Top row -->
+                    <TextView
+                        android:id="@+id/tvOrderIdLabel"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Order ID"
+                        android:textColor="@color/hf_on_surface_variant"
+                        android:textSize="14sp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tvOrderId"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="#FC-2024-003"
+                        android:textColor="@color/hf_on_background"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <View
+                        android:id="@+id/div1"
+                        android:layout_width="0dp"
+                        android:layout_height="14dp"
+                        app:layout_constraintTop_toBottomOf="@id/tvOrderIdLabel"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent" />
+
+                    <!-- Row: Delivering to -->
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/icLocWrap"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        app:cardBackgroundColor="@color/hf_background"
+                        app:cardCornerRadius="14dp"
+                        app:cardElevation="0dp"
+                        app:strokeWidth="0dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/div1">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:padding="9dp"
+                            android:src="@drawable/ic_pin"
+                            android:tint="@color/hf_primary"
+                            android:contentDescription="@null" />
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <TextView
+                        android:id="@+id/tvDeliveringLabel"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Delivering to"
+                        android:textColor="@color/hf_on_surface_variant"
+                        android:textSize="13sp"
+                        app:layout_constraintStart_toEndOf="@id/icLocWrap"
+                        app:layout_constraintTop_toTopOf="@id/icLocWrap"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:layout_marginStart="12dp" />
+
+                    <TextView
+                        android:id="@+id/tvDeliveringValue"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="402, Sea View Apartments,\nBandra West"
+                        android:textColor="@color/hf_on_background"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="@id/tvDeliveringLabel"
+                        app:layout_constraintTop_toBottomOf="@id/tvDeliveringLabel"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:layout_marginTop="4dp" />
+
+                    <View
+                        android:id="@+id/sp2"
+                        android:layout_width="0dp"
+                        android:layout_height="16dp"
+                        app:layout_constraintTop_toBottomOf="@id/tvDeliveringValue"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent" />
+
+                    <!-- Row: Estimated Delivery -->
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/icClockWrap"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        app:cardBackgroundColor="@color/hf_background"
+                        app:cardCornerRadius="14dp"
+                        app:cardElevation="0dp"
+                        app:strokeWidth="0dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/sp2">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:padding="9dp"
+                            android:src="@drawable/ic_clocks"
+                            android:tint="@color/hf_primary"
+                            android:contentDescription="@null" />
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <TextView
+                        android:id="@+id/tvEtaLabel"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Estimated Delivery"
+                        android:textColor="@color/hf_on_surface_variant"
+                        android:textSize="13sp"
+                        app:layout_constraintStart_toEndOf="@id/icClockWrap"
+                        app:layout_constraintTop_toTopOf="@id/icClockWrap"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:layout_marginStart="12dp" />
+
+                    <TextView
+                        android:id="@+id/tvEtaValue"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Today, 2:00 PM - 4:00 PM"
+                        android:textColor="@color/hf_on_background"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="@id/tvEtaLabel"
+                        app:layout_constraintTop_toBottomOf="@id/tvEtaLabel"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:layout_marginTop="4dp" />
+
+                    <View
+                        android:id="@+id/sp3"
+                        android:layout_width="0dp"
+                        android:layout_height="16dp"
+                        app:layout_constraintTop_toBottomOf="@id/tvEtaValue"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent" />
+
+                    <!-- Row: Items -->
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/icBoxWrap"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        app:cardBackgroundColor="@color/hf_background"
+                        app:cardCornerRadius="14dp"
+                        app:cardElevation="0dp"
+                        app:strokeWidth="0dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toBottomOf="@id/sp3">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:padding="9dp"
+                            android:src="@drawable/ic_boxs"
+                            android:tint="@color/hf_primary"
+                            android:contentDescription="@null" />
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <TextView
+                        android:id="@+id/tvItemsLabel"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Items"
+                        android:textColor="@color/hf_on_surface_variant"
+                        android:textSize="13sp"
+                        app:layout_constraintStart_toEndOf="@id/icBoxWrap"
+                        app:layout_constraintTop_toTopOf="@id/icBoxWrap"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:layout_marginStart="12dp" />
+
+                    <TextView
+                        android:id="@+id/tvItemsValue"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Total: Rs 0.00"
+                        android:textColor="@color/hf_on_background"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toStartOf="@id/tvItemsLabel"
+                        app:layout_constraintTop_toBottomOf="@id/tvItemsLabel"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:layout_marginTop="4dp" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Freshness Guaranteed -->
+            <LinearLayout
+                android:id="@+id/rowFreshness"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                app:layout_constraintTop_toBottomOf="@id/cardOrder"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <ImageView
+                    android:id="@+id/tvFish"
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:layout_marginEnd="10dp"
+                    android:tint="@color/wallet_holo_blue_light"
+                    android:src="@drawable/ic_check"
+                    android:contentDescription="@null" />
+
+                <TextView
+                    android:id="@+id/tvFreshness"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Freshness Guaranteed"
+                    android:textColor="@color/hf_tertiary"
+                    android:textSize="15sp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <!-- Track Order button -->
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnTrackOrder"
+                android:layout_width="0dp"
+                android:layout_height="64dp"
+                android:layout_marginTop="34dp"
+                android:text="Track Order"
+                android:textAllCaps="false"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="@color/hf_on_primary"
+                app:backgroundTint="@color/hf_primary"
+                app:cornerRadius="32dp"
+                app:elevation="0dp"
+                app:layout_constraintTop_toBottomOf="@id/rowFreshness"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <!-- Back to Home (link) -->
+            <TextView
+                android:id="@+id/tvBackHome"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Back to Home"
+                android:textColor="@color/hf_primary"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:layout_marginTop="22dp"
+                android:paddingTop="6dp"
+                android:paddingBottom="8dp"
+                app:layout_constraintTop_toBottomOf="@id/btnTrackOrder"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <!-- Extra bottom padding spacer -->
+            <View
+                android:layout_width="0dp"
+                android:layout_height="24dp"
+                app:layout_constraintTop_toBottomOf="@id/tvBackHome"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,21 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+
+    <!-- Fish body -->
+    <path
+        android:fillColor="@color/hf_tertiary"
+        android:pathData="M4,12c2.5,-3 6.5,-3 9,0 -2.5,3 -6.5,3 -9,0z"/>
+
+    <!-- Tail -->
+    <path
+        android:fillColor="@color/hf_tertiary"
+        android:pathData="M13,12l4,-3v6z"/>
+
+    <!-- Eye -->
+    <circle
+        android:fillColor="@color/hf_primary"
+/>
+</vector>

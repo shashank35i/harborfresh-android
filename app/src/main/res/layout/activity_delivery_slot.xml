@@ -1,0 +1,370 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rootDeliverySlot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/hf_background">
+
+    <!-- Top Bar -->
+    <LinearLayout
+        android:id="@+id/topBar"
+        android:layout_width="0dp"
+        android:layout_height="72dp"
+        android:background="@color/hf_background"
+        android:elevation="3dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/btnBack"
+            android:layout_width="28dp"
+            android:layout_height="28dp"
+            android:padding="4dp"
+            android:src="@drawable/ic_back"
+            android:tint="@color/hf_primary" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Delivery Slot"
+                android:textColor="@color/hf_primary"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvSubtitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:text="Choose your preferred time"
+                android:textColor="@color/hf_on_surface_variant"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!-- Bottom Continue Button -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnContinue"
+        android:layout_width="0dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:layout_marginBottom="18dp"
+        android:enabled="false"
+        android:text="Continue"
+        android:textAllCaps="false"
+        android:textSize="15sp"
+        android:textStyle="bold"
+        android:textColor="@color/hf_on_primary"
+        app:backgroundTint="@color/hf_on_surface_variant"
+        app:cornerRadius="16dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Scroll content -->
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scrollSlots"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        android:overScrollMode="never"
+        app:layout_constraintTop_toBottomOf="@id/topBar"
+        app:layout_constraintBottom_toTopOf="@id/btnContinue"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:id="@+id/content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:paddingTop="18dp"
+            android:paddingBottom="18dp">
+
+            <!-- Tabs Row -->
+            <LinearLayout
+                android:id="@+id/tabRow"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <!-- Today (selected) -->
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/tabToday"
+                    android:layout_width="0dp"
+                    android:layout_height="46dp"
+                    android:layout_weight="1"
+                    app:cardBackgroundColor="@color/hf_primary"
+                    app:cardCornerRadius="14dp"
+                    app:cardElevation="0dp">
+
+                    <TextView
+                        android:id="@+id/tvTabToday"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="Today"
+                        android:textColor="@color/hf_on_primary"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+                </com.google.android.material.card.MaterialCardView>
+
+                <View
+                    android:layout_width="14dp"
+                    android:layout_height="1dp" />
+
+                <!-- Tomorrow (unselected) -->
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/tabTomorrow"
+                    android:layout_width="0dp"
+                    android:layout_height="46dp"
+                    android:layout_weight="1"
+                    app:cardBackgroundColor="@color/hf_surface"
+                    app:cardCornerRadius="14dp"
+                    app:cardElevation="10dp"
+                    app:strokeColor="@color/hf_surface_variant"
+                    app:strokeWidth="1dp">
+
+                    <TextView
+                        android:id="@+id/tvTabTomorrow"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center"
+                        android:text="Tomorrow"
+                        android:textColor="@color/hf_on_background"
+                        android:textSize="14sp"
+                        android:textStyle="bold" />
+                </com.google.android.material.card.MaterialCardView>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="18dp" />
+
+            <!-- Slot Card 1 -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardSlot1"
+                android:layout_width="match_parent"
+                android:layout_height="72dp"
+                app:cardBackgroundColor="@color/hf_surface"
+                app:cardCornerRadius="14dp"
+                app:cardElevation="0dp"
+                app:strokeColor="@color/hf_surface_variant"
+                app:strokeWidth="1dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingStart="14dp"
+                    android:paddingEnd="14dp"
+                    android:paddingTop="12dp"
+                    android:paddingBottom="12dp">
+
+                    <!-- Icon circle -->
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/icWrap1"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        app:cardBackgroundColor="@color/hf_secondary_container"
+                        app:cardCornerRadius="20dp"
+                        app:cardElevation="0dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="Fast"
+                            android:textSize="11sp"
+                            android:includeFontPadding="false" />
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <TextView
+                        android:id="@+id/tvTime1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="2:00 PM - 4:00 PM"
+                        android:textColor="@color/hf_on_background"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toEndOf="@id/icWrap1"
+                        app:layout_constraintTop_toTopOf="@id/icWrap1"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:layout_marginStart="12dp" />
+
+                    <TextView
+                        android:id="@+id/tvSub1"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="Express Delivery"
+                        android:textColor="@color/hf_secondary"
+                        android:textSize="11sp"
+                        app:layout_constraintStart_toStartOf="@id/tvTime1"
+                        app:layout_constraintTop_toBottomOf="@id/tvTime1"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:layout_marginTop="4dp" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="12dp" />
+
+            <!-- Slot Card 2 -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardSlot2"
+                android:layout_width="match_parent"
+                android:layout_height="72dp"
+                app:cardBackgroundColor="@color/hf_surface"
+                app:cardCornerRadius="14dp"
+                app:cardElevation="0dp"
+                app:strokeColor="@color/hf_surface_variant"
+                app:strokeWidth="1dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingStart="14dp"
+                    android:layout_marginTop="0dp"
+                    android:paddingEnd="14dp"
+                    android:paddingTop="16dp"
+                    android:paddingBottom="16dp">
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/icWrap2"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        app:cardBackgroundColor="@color/hf_surface_variant"
+                        app:cardCornerRadius="20dp"
+                        app:cardElevation="0dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="Clock"
+                            android:textSize="10sp"
+                            android:includeFontPadding="false" />
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <TextView
+                        android:id="@+id/tvTime2"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="4:00 PM - 6:00 PM"
+                        android:textColor="@color/hf_on_background"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toEndOf="@id/icWrap2"
+                        app:layout_constraintTop_toTopOf="@id/icWrap2"
+                        app:layout_constraintBottom_toBottomOf="@id/icWrap2"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        android:layout_marginStart="12dp" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="12dp" />
+
+            <!-- Slot Card 3 (unavailable) -->
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cardSlot3"
+                android:layout_width="match_parent"
+                android:layout_height="72dp"
+                android:alpha="0.72"
+                app:cardBackgroundColor="@color/hf_surface"
+                app:cardCornerRadius="14dp"
+                app:cardElevation="0dp"
+                app:strokeColor="@color/hf_surface_variant"
+                app:strokeWidth="1dp">
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingStart="14dp"
+                    android:paddingEnd="14dp"
+                    android:paddingTop="16dp"
+                    android:paddingBottom="16dp">
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/icWrap3"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        app:cardBackgroundColor="@color/hf_surface_variant"
+                        app:cardCornerRadius="20dp"
+                        app:cardElevation="0dp"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="Clock"
+                            android:textSize="10sp"
+                            android:includeFontPadding="false" />
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <TextView
+                        android:id="@+id/tvTime3"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:text="6:00 PM - 8:00 PM"
+                        android:textColor="@color/hf_on_background"
+                        android:textSize="14sp"
+                        android:textStyle="bold"
+                        app:layout_constraintStart_toEndOf="@id/icWrap3"
+                        app:layout_constraintTop_toTopOf="@id/icWrap3"
+                        app:layout_constraintBottom_toBottomOf="@id/icWrap3"
+                        app:layout_constraintEnd_toStartOf="@id/tvUnavailable"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginEnd="10dp" />
+
+                    <TextView
+                        android:id="@+id/tvUnavailable"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Unavailable"
+                        android:textColor="@color/hf_on_surface_variant"
+                        android:textSize="12sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="@id/tvTime3"
+                        app:layout_constraintBottom_toBottomOf="@id/tvTime3" />
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp" />
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

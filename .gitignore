@@ -1,0 +1,16 @@
+*.iml
+.gradle
+/local.properties
+/.idea/
+.DS_Store
+/build
+/captures
+.externalNativeBuild
+.cxx
+local.properties
+app/build/
+app/release/
+changes.txt
+tmp_layout.txt
+tmp_segment.xml
+app/src/main/res/drawable/splash_legacy.png

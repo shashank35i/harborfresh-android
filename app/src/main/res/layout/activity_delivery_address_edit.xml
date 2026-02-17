@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/hf_background">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/topBarEdit"
+        android:layout_width="0dp"
+        android:layout_height="64dp"
+        app:cardBackgroundColor="@color/hf_surface"
+        app:cardCornerRadius="0dp"
+        app:cardElevation="0dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp">
+
+            <TextView
+                android:id="@+id/btnBackEdit"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Back"
+                android:textColor="@color/hf_on_background"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent" />
+
+            <TextView
+                android:id="@+id/tvTitleEdit"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="Edit Address"
+                android:textColor="@color/hf_on_background"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toEndOf="@id/btnBackEdit"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:layout_marginStart="16dp" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scrollEdit"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:fillViewport="true"
+        android:overScrollMode="never"
+        app:layout_constraintTop_toBottomOf="@id/topBarEdit"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+
+            <TextView
+                android:id="@+id/btnUseCurrentLocation"
+                android:layout_width="match_parent"
+                android:layout_height="44dp"
+                android:background="@color/hf_surface_variant"
+                android:gravity="center"
+                android:text="Use current location"
+                android:textColor="@color/hf_primary"
+                android:textSize="13sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Label"
+                android:textColor="@color/hf_on_background"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <com.google.android.material.chip.ChipGroup
+                android:id="@+id/chipGroupLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                app:singleSelection="true"
+                app:selectionRequired="true"
+                app:chipSpacing="10dp">
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chipHome"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Home"
+                    android:checkable="true"
+                    android:clickable="true"
+                    android:focusable="true"
+                    app:checkedIconVisible="false"
+                    app:chipStrokeWidth="1dp"
+                    app:chipBackgroundColor="@color/chip_label_bg_selector"
+                    app:chipStrokeColor="@color/chip_label_stroke_selector"
+
+                    app:rippleColor="@color/chip_label_ripple"/>
+
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chipOffice"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Office"
+                    android:checkable="true"
+
+                    app:chipBackgroundColor="@color/chip_label_bg"
+                    app:chipStrokeColor="@color/chip_label_stroke"
+                    app:chipStrokeWidth="1dp"
+                    app:rippleColor="@color/chip_label_ripple"
+                    app:checkedIconVisible="false"
+                    android:textColor="@color/chip_label_text" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/chipOther"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Other"
+                    app:chipBackgroundColor="@color/chip_label_bg"
+                    app:chipStrokeColor="@color/chip_label_stroke"
+                    app:chipStrokeWidth="1dp"
+                    android:checkable="true"
+
+                    app:rippleColor="@color/chip_label_ripple"
+                    app:checkedIconVisible="false"
+                    android:textColor="@color/chip_label_text" />
+            </com.google.android.material.chip.ChipGroup>
+
+            <EditText
+                android:id="@+id/etName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/bg_input_outline"
+                android:hint="Full Name"
+                android:inputType="textPersonName"
+                android:paddingStart="14dp"
+                android:paddingEnd="14dp"
+                android:paddingTop="12dp"
+                android:paddingBottom="12dp"
+                android:textColor="@color/hf_on_background"
+                android:textColorHint="@color/hf_on_surface_variant" />
+
+            <EditText
+                android:id="@+id/etLine1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/bg_input_outline"
+                android:hint="Address Line 1"
+                android:inputType="textPostalAddress"
+                android:paddingStart="14dp"
+                android:paddingEnd="14dp"
+                android:paddingTop="12dp"
+                android:paddingBottom="12dp"
+                android:textColor="@color/hf_on_background"
+                android:textColorHint="@color/hf_on_surface_variant" />
+
+            <EditText
+                android:id="@+id/etLine2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/bg_input_outline"
+                android:hint="Address Line 2"
+                android:inputType="textPostalAddress"
+                android:paddingStart="14dp"
+                android:paddingEnd="14dp"
+                android:paddingTop="12dp"
+                android:paddingBottom="12dp"
+                android:textColor="@color/hf_on_background"
+                android:textColorHint="@color/hf_on_surface_variant" />
+
+            <EditText
+                android:id="@+id/etCity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/bg_input_outline"
+                android:hint="City"
+                android:inputType="textPersonName"
+                android:paddingStart="14dp"
+                android:paddingEnd="14dp"
+                android:paddingTop="12dp"
+                android:paddingBottom="12dp"
+                android:textColor="@color/hf_on_background"
+                android:textColorHint="@color/hf_on_surface_variant" />
+
+            <EditText
+                android:id="@+id/etPin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:background="@drawable/bg_input_outline"
+                android:hint="Pincode"
+                android:inputType="number"
+                android:paddingStart="14dp"
+                android:paddingEnd="14dp"
+                android:paddingTop="12dp"
+                android:paddingBottom="12dp"
+                android:textColor="@color/hf_on_background"
+                android:textColorHint="@color/hf_on_surface_variant" />
+
+            <TextView
+                android:id="@+id/btnSaveAddress"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="20dp"
+                android:background="@color/hf_primary"
+                android:gravity="center"
+                android:text="Save Address"
+                android:textColor="@color/hf_on_primary"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

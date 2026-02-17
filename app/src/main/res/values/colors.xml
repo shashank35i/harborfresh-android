@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="hf_primary">#0F3D4C</color>
+    <color name="hf_on_primary">#FFFFFF</color>
+    <color name="hf_primary_container">#CFECEF</color>
+    <color name="hf_on_primary_container">#06242D</color>
+
+    <color name="hf_secondary">#F08A4B</color>
+    <color name="hf_on_secondary">#2C1405</color>
+    <color name="hf_secondary_container">#FFE3D1</color>
+    <color name="hf_on_secondary_container">#2C1405</color>
+
+    <color name="hf_tertiary">#2F7D67</color>
+    <color name="hf_on_tertiary">#FFFFFF</color>
+    <color name="hf_tertiary_container">#C8F0E2</color>
+    <color name="hf_on_tertiary_container">#0A271F</color>
+
+    <color name="hf_background">#F4F7F9</color>
+    <color name="hf_on_background">#0E1B20</color>
+    <color name="hf_surface">#FFFFFF</color>
+    <color name="hf_on_surface">#0E1B20</color>
+    <color name="hf_surface_variant">#E6ECEF</color>
+    <color name="hf_on_surface_variant">#5B6B74</color>
+    <color name="hf_outline">#B9C4CB</color>
+
+    <color name="hf_error">#B3261E</color>
+    <color name="hf_on_error">#FFFFFF</color>
+
+    <color name="hf_black">#FF000000</color>
+    <color name="hf_white">#FFFFFFFF</color>
+</resources>

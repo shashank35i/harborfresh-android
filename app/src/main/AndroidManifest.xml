@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <application
+        android:allowBackup="true"
+        android:usesCleartextTraffic="true"
+        android:label="@string/app_name"
+        android:icon="@mipmap/ic_launcher"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.HarborFresh">
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <!-- Launcher Activity -->
+        <activity
+            android:name=".SplashActivity"
+            android:exported="true"
+            android:theme="@style/Theme.HarborFresh.Splash">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".SubscriptionActivity" />
+
+        <!-- Onboarding Activities -->
+        <activity
+            android:name=".onboarding.Onboarding1Activity"
+            android:theme="@style/Theme.HarborFresh.Onboarding" />
+
+        <activity
+            android:name=".onboarding.Onboarding2Activity"
+            android:theme="@style/Theme.HarborFresh.Onboarding" />
+
+        <activity
+            android:name=".onboarding.Onboarding3Activity"
+            android:theme="@style/Theme.HarborFresh.Onboarding" />
+
+
+        <!-- Auth Activities -->
+        <activity android:name=".auth.LoginActivity" />
+        <activity android:name=".auth.SignupActivity" />
+        <activity android:name=".auth.OtpVerificationActivity" />
+        <activity android:name=".auth.ForgotPasswordActivity" />
+        <activity android:name=".identity.IdentityVerification1Activity" />
+        <activity android:name=".identity.IdentityVerification2Activity" />
+        <activity android:name=".identity.IdentityVerification3Activity" />
+        <activity android:name=".identity.IdentityVerification4Activity" />
+        <activity android:name=".identity.IdentityVerification5Activity" />
+        <activity android:name=".identity.IdentityBigVerification1Activity" />
+        <activity android:name=".identity.IdentityBigVerification2Activity" />
+        <activity android:name=".identity.IdentityBigVerification3Activity" />
+        <activity android:name=".identity.IdentityBigVerification4Activity" />
+        <activity android:name=".FishActivity" />
+        <activity android:name=".DeliveryAddressActivity" />
+        <activity android:name=".DeliveryAddressEditActivity" />
+        <activity android:name=".DeliverySlotActivity" />
+        <activity android:name=".PaymentActivity" />
+        <activity android:name=".OrderConfirmedActivity" />
+        <activity android:name=".TrackOrderActivity" />
+        <activity android:name=".HelpActivity" />
+        <activity android:name=".FavoritesActivity" />
+
+        <activity android:name=".seller.SellerDashboardActivity" />
+        <activity android:name=".admin.AdminDashboardActivity" />
+                <activity android:name=".admin.AdminAllSellersActivity" />
+        <activity android:name=".admin.AdminSellerDetailActivity" />
+        <activity android:name=".seller.SellerAddProductActivity" />
+        <activity android:name=".AddToCartActivity" />
+
+        <!-- Main App Activities -->
+        <activity android:name=".HomeActivity" />
+        <activity android:name=".home.ProductListActivity" />
+
+
+    </application>
+
+</manifest>
+
