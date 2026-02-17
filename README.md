@@ -1,7 +1,7 @@
 # HarborFresh Android
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/shashank35i/harborfresh-android/master/demos/harborfresh_phone_home.png" width="100%" alt="HarborFresh Android preview" />
+  <img src="https://raw.githubusercontent.com/shashank35i/harborfresh-android/master/demos/harborfresh_logo.png" width="180" alt="HarborFresh logo" />
 </div>
 
 <p align="center">
@@ -13,7 +13,7 @@
   <img src="https://img.shields.io/badge/Status-Production--ready-2F7D67?style=for-the-badge" />
 </p>
 
-<p align="center"><strong>HarborFresh</strong> — dock-to-door seafood marketplace Android app for customers, sellers, and admins.</p>
+<p align="center"><strong>HarborFresh</strong>  dock-to-door seafood marketplace Android app for customers, sellers, and admins.</p>
 
 Built by Shashank Preetham Pendyala
 
@@ -33,7 +33,6 @@ Success is measured by:
 
 ## Table of Contents
 
-- [Demo](#demo)
 - [Features](#features)
 - [Architecture](#architecture)
 - [Layered Architecture](#layered-architecture)
@@ -54,15 +53,6 @@ Success is measured by:
 - [Troubleshooting](#troubleshooting)
 - [Roadmap](#roadmap)
 - [License](#license)
-
----
-
-## Demo
-
-<div align="center">
-  <img src="https://raw.githubusercontent.com/shashank35i/harborfresh-android/master/demos/harborfresh_phone_home.png" width="100%" alt="HarborFresh overview" />
-  <img src="https://raw.githubusercontent.com/shashank35i/harborfresh-android/master/demos/harborfresh_phone_checkout.png" width="100%" alt="HarborFresh checkout" />
-</div>
 
 ---
 
@@ -328,6 +318,7 @@ Configured in `local.properties` / build config:
 
 MIT License.
 See [LICENSE](LICENSE).
+
 
 
 
