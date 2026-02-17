@@ -1,7 +1,7 @@
 # HarborFresh Android
 
 <div align="center">
-  <img src="demos/harborfresh_mockup_overview.svg" width="100%" alt="HarborFresh Android preview" />
+  <img src="https://raw.githubusercontent.com/shashank35i/harborfresh-android/master/demos/harborfresh_mockup_overview.svg" width="100%" alt="HarborFresh Android preview" />
 </div>
 
 <p align="center">
@@ -60,8 +60,8 @@ Success is measured by:
 ## Demo
 
 <div align="center">
-  <img src="demos/harborfresh_mockup_overview.svg" width="100%" alt="HarborFresh overview" />
-  <img src="demos/harborfresh_mockup_checkout.svg" width="100%" alt="HarborFresh checkout" />
+  <img src="https://raw.githubusercontent.com/shashank35i/harborfresh-android/master/demos/harborfresh_mockup_overview.svg" width="100%" alt="HarborFresh overview" />
+  <img src="https://raw.githubusercontent.com/shashank35i/harborfresh-android/master/demos/harborfresh_mockup_checkout.svg" width="100%" alt="HarborFresh checkout" />
 </div>
 
 ---
@@ -328,3 +328,4 @@ Configured in `local.properties` / build config:
 
 MIT License.
 See [LICENSE](LICENSE).
+
