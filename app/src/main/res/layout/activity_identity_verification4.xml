@@ -81,7 +81,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent">
 
-        <androidx.appcompat.widget.AppCompatButton
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/btnBackBottom"
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -91,9 +91,9 @@
             android:textSize="18sp"
             android:textStyle="bold"
             android:textColor="@color/hf_primary"
-            android:background="@drawable/bg_button_outline"/>
+        style="@style/HF.Button.Outline"/>
 
-        <androidx.appcompat.widget.AppCompatButton
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/btnContinue"
             android:layout_width="0dp"
             android:layout_height="match_parent"
@@ -104,7 +104,7 @@
             android:textSize="14sp"
             android:textStyle="bold"
             android:textColor="@android:color/white"
-            android:background="@drawable/bg_button_primary"/>
+        style="@style/HF.Button.Primary"/>
     </LinearLayout>
 
     <!-- Document list -->
@@ -144,14 +144,14 @@
                 android:text="Not uploaded"
                 android:textColor="@color/hf_on_surface_variant" />
 
-            <androidx.appcompat.widget.AppCompatButton
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/btnUploadLicense"
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
                 android:layout_marginTop="8dp"
                 android:text="Choose file"
                 android:textAllCaps="false"
-                android:background="@drawable/bg_button_outline" />
+        style="@style/HF.Button.Outline" />
         </LinearLayout>
 
         <LinearLayout
@@ -178,14 +178,14 @@
                 android:text="Not uploaded"
                 android:textColor="@color/hf_on_surface_variant" />
 
-            <androidx.appcompat.widget.AppCompatButton
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/btnUploadId"
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
                 android:layout_marginTop="8dp"
                 android:text="Choose file"
                 android:textAllCaps="false"
-                android:background="@drawable/bg_button_outline" />
+        style="@style/HF.Button.Outline" />
         </LinearLayout>
 
         <LinearLayout
@@ -211,14 +211,14 @@
                 android:text="Not uploaded"
                 android:textColor="@color/hf_on_surface_variant" />
 
-            <androidx.appcompat.widget.AppCompatButton
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/btnUploadAddress"
                 android:layout_width="match_parent"
                 android:layout_height="48dp"
                 android:layout_marginTop="8dp"
                 android:text="Choose file"
                 android:textAllCaps="false"
-                android:background="@drawable/bg_button_outline" />
+        style="@style/HF.Button.Outline" />
         </LinearLayout>
 
     </LinearLayout>

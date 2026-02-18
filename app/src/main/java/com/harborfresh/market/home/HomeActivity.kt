@@ -1,16 +1,16 @@
 package com.harborfresh.market
 
-import android.graphics.Color
 import android.os.Bundle
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
+import androidx.core.content.ContextCompat
 
 class HomeActivity : AppCompatActivity() {
 
-    private val COLOR_OFF = Color.parseColor("#98A2B3")
-    private val COLOR_ON = Color.parseColor("#111111")
+    private val COLOR_OFF by lazy { ContextCompat.getColor(this, R.color.hf_on_surface_variant) }
+    private val COLOR_ON by lazy { ContextCompat.getColor(this, R.color.hf_primary) }
 
     private lateinit var ivHome: ImageView
     private lateinit var ivCategories: ImageView

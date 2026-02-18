@@ -55,7 +55,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:text="Deliver to"
-                    android:textColor="@color/hf_on_surface_variant"
+                    android:textColor="@color/hf_on_primary"
                     android:textSize="11sp" />
 
                 <LinearLayout
@@ -78,7 +78,7 @@
                         android:layout_height="16dp"
                         android:layout_marginStart="6dp"
                         android:src="@drawable/ic_chevron_right_24"
-                        android:tint="@color/hf_on_surface_variant" />
+                        android:tint="@color/hf_on_primary" />
                 </LinearLayout>
             </LinearLayout>
         </LinearLayout>
@@ -183,7 +183,7 @@
                             android:layout_height="wrap_content"
                             android:layout_marginStart="8dp"
                             android:text="Just Caught"
-                            android:textColor="@color/hf_on_primary"
+                            android:textColor="@color/hf_on_primary_container"
                             android:textSize="11sp"
                             android:textStyle="bold" />
                     </LinearLayout>
@@ -193,7 +193,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="30dp"
                         android:text="Today's Fresh Catch"
-                        android:textColor="@color/hf_on_primary"
+                        android:textColor="@color/hf_on_surface"
                         android:textSize="16sp"
                         android:textStyle="bold" />
 
@@ -614,7 +614,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="10dp"
                         android:text="Get 15% off every order"
-                        android:textColor="@color/hf_on_primary"
+                        android:textColor="@color/hf_on_surface"
                         android:textSize="16sp"
                         android:textStyle="bold"
                         app:layout_constraintStart_toStartOf="parent"

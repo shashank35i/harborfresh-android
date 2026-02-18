@@ -11,7 +11,7 @@
         android:id="@+id/topBar"
         android:layout_width="0dp"
         android:layout_height="88dp"
-        android:background="@android:color/white"
+        android:background="@color/hf_background"
         android:elevation="8dp"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -63,14 +63,14 @@
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <!-- Bottom Primary Button -->
-    <androidx.appcompat.widget.AppCompatButton
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/btnAddToInventory"
         android:layout_width="0dp"
         android:layout_height="64dp"
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
         android:layout_marginBottom="18dp"
-        android:background="@drawable/bg_button_primary"
+        style="@style/HF.Button.Primary"
         android:text="Add to Inventory"
         android:textAllCaps="false"
         android:textColor="@android:color/white"

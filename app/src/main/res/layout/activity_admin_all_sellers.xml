@@ -9,7 +9,7 @@
         android:id="@+id/toolbarAdminAll"
         android:layout_width="0dp"
         android:layout_height="56dp"
-        android:background="@android:color/white"
+        android:background="@color/hf_background"
         android:title="All Sellers"
         android:titleTextColor="@color/hf_on_background"
         app:navigationIcon="@drawable/ic_back_24"

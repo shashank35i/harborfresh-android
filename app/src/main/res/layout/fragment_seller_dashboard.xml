@@ -66,7 +66,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="14dp"
                         android:text="Seller"
-                        android:textColor="@android:color/white"
+                        
                         android:textSize="22sp"
                         android:textStyle="bold"
                         app:layout_constraintStart_toEndOf="@id/avatarWrap"
@@ -92,7 +92,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="6dp"
                         android:text="Set location"
-                        android:textColor="@android:color/white"
+                        
                         android:textSize="14sp"
                         android:textStyle="bold"
                         app:layout_constraintStart_toStartOf="@id/tvSellerLoc"
@@ -260,28 +260,28 @@
                     android:orientation="horizontal"
                     android:weightSum="2">
 
-                    <androidx.appcompat.widget.AppCompatButton
+                    <com.google.android.material.button.MaterialButton
                         android:id="@+id/btnAddCatch"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
                         android:layout_marginEnd="12dp"
-                        android:background="@drawable/bg_button_primary_dark_22"
+        style="@style/HF.Button.Outline"
                         android:text="Add New\nCatch"
                         android:textAllCaps="false"
-                        android:textColor="@android:color/white"
+                        
                         android:textSize="18sp"
                         android:textStyle="bold" />
 
-                    <androidx.appcompat.widget.AppCompatButton
+                    <com.google.android.material.button.MaterialButton
                         android:id="@+id/btnViewOrders"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
-                        android:background="@drawable/bg_button_green_22"
+        style="@style/HF.Button.Primary"
                         android:text="View\nOrders"
                         android:textAllCaps="false"
-                        android:textColor="@android:color/white"
+                        
                         android:textSize="18sp"
                         android:textStyle="bold" />
                 </LinearLayout>

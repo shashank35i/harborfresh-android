@@ -16,7 +16,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom"
-        android:background="@android:color/white"
+        android:background="@color/hf_surface"
         app:itemIconTint="@color/bottom_nav_tint_purple"
         app:itemTextColor="@color/bottom_nav_tint_purple"
         app:itemActiveIndicatorStyle="@style/BottomNavIndicatorPurple"

@@ -136,7 +136,7 @@
         android:orientation="horizontal"
         android:weightSum="2">
 
-        <androidx.appcompat.widget.AppCompatButton
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/btnAccept"
             android:layout_width="0dp"
             android:layout_height="52dp"
@@ -149,7 +149,7 @@
             android:textSize="18sp"
             android:textStyle="bold" />
 
-        <androidx.appcompat.widget.AppCompatButton
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/btnDecline"
             android:layout_width="0dp"
             android:layout_height="52dp"

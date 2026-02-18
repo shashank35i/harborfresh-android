@@ -105,26 +105,26 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
 
-        <androidx.appcompat.widget.AppCompatButton
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/btnBack"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_marginEnd="10dp"
             android:layout_weight="1"
-            android:background="@drawable/bg_button_outline"
+        style="@style/HF.Button.Outline"
             android:text="Back"
             android:textAllCaps="false"
             android:textColor="@color/hf_primary"
             android:textSize="18sp"
             android:textStyle="bold" />
 
-        <androidx.appcompat.widget.AppCompatButton
+        <com.google.android.material.button.MaterialButton
             android:id="@+id/btnContinue"
             android:layout_width="0dp"
             android:layout_height="match_parent"
             android:layout_marginStart="10dp"
             android:layout_weight="1"
-            android:background="@drawable/bg_button_primary"
+        style="@style/HF.Button.Primary"
             android:text="Start\nVerification"
             android:textAllCaps="false"
             android:textColor="@android:color/white"

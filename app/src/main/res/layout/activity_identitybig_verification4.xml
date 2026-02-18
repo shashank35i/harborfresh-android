@@ -240,14 +240,14 @@
     </LinearLayout>
 
     <!-- Continue button -->
-    <androidx.appcompat.widget.AppCompatButton
+    <com.google.android.material.button.MaterialButton
         android:id="@+id/btnContinue"
         android:layout_width="0dp"
         android:layout_height="64dp"
         android:layout_marginStart="20dp"
         android:layout_marginEnd="20dp"
         android:layout_marginBottom="18dp"
-        android:background="@drawable/bg_button_primary"
+        style="@style/HF.Button.Primary"
         android:text="Continue"
         android:textAllCaps="false"
         android:textColor="@android:color/white"

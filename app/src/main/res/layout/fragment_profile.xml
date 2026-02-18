@@ -640,7 +640,7 @@
             </LinearLayout>
 
             <!-- Sign out -->
-            <androidx.appcompat.widget.AppCompatButton
+            <com.google.android.material.button.MaterialButton
                 android:id="@+id/btnSignOut"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -663,7 +663,7 @@
         android:id="@+id/bottomNav"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:background="@android:color/white"
+        android:background="@color/hf_background"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
